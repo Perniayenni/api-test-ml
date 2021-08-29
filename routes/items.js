@@ -1,9 +1,9 @@
 const { Router } = require("express");
-const { searchItems, item } = require("../controllers/items");
+const { searchItems, getItemDetail } = require("../controllers/items");
 const router = Router();
 
 router.get("/", searchItems);
 
-router.get("/:id", item);
+router.get("/:id", getItemDetail);
 
 module.exports = router;
